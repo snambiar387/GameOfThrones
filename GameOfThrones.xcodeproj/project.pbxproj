@@ -20,6 +20,8 @@
 		B2243F49209EB388008173AF /* Battle.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2243F48209EB388008173AF /* Battle.swift */; };
 		B2243F4C209EBAD7008173AF /* DataRetriever.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2243F4B209EBAD7008173AF /* DataRetriever.swift */; };
 		B2243F50209ECA6C008173AF /* WebServiceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2243F4F209ECA6C008173AF /* WebServiceManager.swift */; };
+		B22896E0209F1A6600486D09 /* BattleParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = B22896DF209F1A6600486D09 /* BattleParser.swift */; };
+		B22896E3209F1AAF00486D09 /* KingListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B22896E2209F1AAF00486D09 /* KingListViewModel.swift */; };
 		B264797F209F089B0011C7EB /* KingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B264797E209F089B0011C7EB /* KingTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
@@ -61,6 +63,8 @@
 		B2243F48209EB388008173AF /* Battle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Battle.swift; sourceTree = "<group>"; };
 		B2243F4B209EBAD7008173AF /* DataRetriever.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataRetriever.swift; sourceTree = "<group>"; };
 		B2243F4F209ECA6C008173AF /* WebServiceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebServiceManager.swift; sourceTree = "<group>"; };
+		B22896DF209F1A6600486D09 /* BattleParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BattleParser.swift; sourceTree = "<group>"; };
+		B22896E2209F1AAF00486D09 /* KingListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KingListViewModel.swift; sourceTree = "<group>"; };
 		B264797E209F089B0011C7EB /* KingTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KingTableViewCell.swift; sourceTree = "<group>"; };
 		CE8098F0E1CB4F86F91A5A4C /* Pods_GameOfThrones.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GameOfThrones.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -124,6 +128,7 @@
 		B2243F10209EAC72008173AF /* GameOfThrones */ = {
 			isa = PBXGroup;
 			children = (
+				B22896E1209F1A8B00486D09 /* ViewModel */,
 				B264797D209F087B0011C7EB /* View */,
 				B2243F4E209ECA4B008173AF /* Worker */,
 				B2243F4A209EB9D4008173AF /* Protcols */,
@@ -194,8 +199,17 @@
 			isa = PBXGroup;
 			children = (
 				B2243F4F209ECA6C008173AF /* WebServiceManager.swift */,
+				B22896DF209F1A6600486D09 /* BattleParser.swift */,
 			);
 			path = Worker;
+			sourceTree = "<group>";
+		};
+		B22896E1209F1A8B00486D09 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				B22896E2209F1AAF00486D09 /* KingListViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		B264797D209F087B0011C7EB /* View */ = {
@@ -394,8 +408,10 @@
 				B2243F50209ECA6C008173AF /* WebServiceManager.swift in Sources */,
 				B2243F43209EAEEC008173AF /* KingsTableViewController.swift in Sources */,
 				B2243F45209EB295008173AF /* KingsListPresenter.swift in Sources */,
+				B22896E0209F1A6600486D09 /* BattleParser.swift in Sources */,
 				B2243F47209EB37D008173AF /* King.swift in Sources */,
 				B2243F49209EB388008173AF /* Battle.swift in Sources */,
+				B22896E3209F1AAF00486D09 /* KingListViewModel.swift in Sources */,
 				B264797F209F089B0011C7EB /* KingTableViewCell.swift in Sources */,
 				B2243F12209EAC72008173AF /* AppDelegate.swift in Sources */,
 			);
