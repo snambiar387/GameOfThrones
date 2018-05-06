@@ -27,17 +27,14 @@ class KingsTableViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! KingTableViewCell
 
-        let king = presenter.king(at: indexPath.row)
-        
-        cell.textLabel?.text = king.name
-
+        cell.configure(viewModel: presenter.king(at: indexPath.row))
         return cell
     }
     
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 100
+        return 140
     }
 }
 

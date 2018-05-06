@@ -14,6 +14,7 @@ struct KingListViewModel {
     let attacksMade: String
     let defendsMade: String
     let totalWin: String
+    let rating = "0"
     
     init(king: King) {
         

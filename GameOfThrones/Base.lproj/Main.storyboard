@@ -19,7 +19,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" rowHeight="131" id="var-Bf-DMn">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" rowHeight="131" id="var-Bf-DMn" customClass="KingTableViewCell" customModule="GameOfThrones" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="375" height="131"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="var-Bf-DMn" id="Dru-Ai-qpC">
@@ -110,7 +110,7 @@
                                         <constraint firstItem="ybG-yY-KYI" firstAttribute="top" secondItem="Ogs-aW-bJd" secondAttribute="bottom" constant="22" id="its-cI-83A"/>
                                         <constraint firstItem="AAf-j1-0pn" firstAttribute="leading" secondItem="ybG-yY-KYI" secondAttribute="trailing" constant="8" id="mWU-XB-Lyj"/>
                                         <constraint firstItem="fLm-uV-4kg" firstAttribute="leading" secondItem="diN-G2-kwC" secondAttribute="trailing" constant="36" id="nYc-ic-XpA"/>
-                                        <constraint firstItem="d9f-Ea-rsO" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="fLm-uV-4kg" secondAttribute="trailing" symbolic="YES" id="ozn-Co-yEO"/>
+                                        <constraint firstItem="d9f-Ea-rsO" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="fLm-uV-4kg" secondAttribute="trailing" constant="8" symbolic="YES" id="ozn-Co-yEO"/>
                                         <constraint firstItem="Ogs-aW-bJd" firstAttribute="leading" secondItem="rKh-vN-eoo" secondAttribute="leading" id="qka-6A-W9b"/>
                                         <constraint firstItem="u59-Xt-img" firstAttribute="centerY" secondItem="Dru-Ai-qpC" secondAttribute="centerY" id="sWc-bU-MsO"/>
                                         <constraint firstItem="u59-Xt-img" firstAttribute="leading" secondItem="Dru-Ai-qpC" secondAttribute="leading" constant="8" id="sZe-By-TeR"/>
@@ -118,6 +118,14 @@
                                         <constraint firstItem="X3t-W6-RCH" firstAttribute="leading" secondItem="Ogs-aW-bJd" secondAttribute="trailing" constant="8" id="ucN-IG-qd2"/>
                                     </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="kingNameLabel" destination="rKh-vN-eoo" id="1fq-eg-vnR"/>
+                                    <outlet property="kingdomImageView" destination="u59-Xt-img" id="cJq-4j-xkH"/>
+                                    <outlet property="numberOfAttacksLabel" destination="diN-G2-kwC" id="V32-8L-Gqi"/>
+                                    <outlet property="numberOfDefendsLabel" destination="d9f-Ea-rsO" id="wIt-gc-L7f"/>
+                                    <outlet property="numberOfWinsLabel" destination="AAf-j1-0pn" id="Y2c-Ms-ZyE"/>
+                                    <outlet property="ratingLabel" destination="X3t-W6-RCH" id="slt-iH-E4e"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
