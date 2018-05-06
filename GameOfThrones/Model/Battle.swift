@@ -13,7 +13,7 @@ enum BattleResult {
     case loose
 }
 
-struct Battle {
+class Battle {
     
     /*
      "name": "Battle of the Golden Tooth",
@@ -46,11 +46,11 @@ struct Battle {
     
     var name: String
     //var year: Int
-    var battleNumber: Int?
-    var attackerKing: String?
-    var defenderKing: String?
+    var battleNumber: Int
+    var attackerKing: String
+    var defenderKing: String
     //var location: String?
-    var outcome: BattleResult
+    var attackerOutcome: BattleResult
     
     init?(dictionary: [String : AnyObject]) {
         
@@ -62,7 +62,6 @@ struct Battle {
         self.battleNumber = battleNumber
         self.attackerKing = attackerKing
         self.defenderKing = defenderKing
-        self.outcome = (outcome == "win") ? .win : .loose
-        
+        self.attackerOutcome = (outcome == "win") ? .win : .loose
     }
 }

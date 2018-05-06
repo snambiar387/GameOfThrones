@@ -11,7 +11,7 @@ import XCTest
 
 class MockDataRetriever: DataRetriever {
     
-    func loadBattles(completionHandler: (Error?, [Battle]?) -> Void) {
+    func loadBattles(completionHandler: @escaping (Error?, [Battle]?) -> Void) {
         
         completionHandler(nil, [Battle]())
     }
