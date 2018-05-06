@@ -15,9 +15,7 @@ enum Result<A> {
     case success(A)
 }
 
-
 protocol DataRetriever {
     
     func loadBattles(completionHandler: @escaping (Error?, [Battle]?) -> Void) -> Void
-    
 }

@@ -16,7 +16,6 @@ class KingsTableViewController: UITableViewController {
         super.viewDidLoad()
         
         presenter = KingsListPresenter(dataRetriever: WebServiceManager(), view: self)
-        
         presenter.loadAllKings()
     }
    
@@ -41,14 +40,11 @@ class KingsTableViewController: UITableViewController {
 extension KingsTableViewController: KingListPresenterOutput {
     
     func showError(message: String) {
-        
-        showDefaultAlert(with: "Error", message: message)
+        showDefaultAlertWith(title: "Error", message: message)
     }
     
     func showNoContent() {
-        
-        showDefaultAlert(with: "", message: "No content")
-
+        showDefaultAlertWith(title: "", message: "No content")
     }
     
     func updateKingsList() {
@@ -59,10 +55,9 @@ extension KingsTableViewController: KingListPresenterOutput {
     }
 }
 
-
 extension UIViewController {
     
-    func showDefaultAlert(with title: String, message: String) {
+    func showDefaultAlertWith(title: String, message: String) {
         let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "OK", style: .default))
         self.present(alert, animated: true, completion: nil)
