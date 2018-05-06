@@ -31,22 +31,24 @@ class KingsListPresenter {
     
     func loadAllKings() {
         
-        dataRetriever.loadBattles { (error, battles) in
+        dataRetriever.loadBattles { [weak self] (error, battles) in
+            
+            guard let strongSelf = self  else { return }
             
             guard error == nil else  {
-                view.showError(message: error!.localizedDescription)
+                strongSelf.view.showError(message: error!.localizedDescription)
                 return
             }
             
             guard let battles = battles, !battles.isEmpty else {
-                view.showNoContent()
+                strongSelf.view.showNoContent()
                 return
                 
             }
             
             //Business Logic come here
             
-            view.updateKingsList()
+            strongSelf.view.updateKingsList()
         }
     }
 }

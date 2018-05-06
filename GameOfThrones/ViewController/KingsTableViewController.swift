@@ -10,16 +10,16 @@ import UIKit
 
 class KingsTableViewController: UITableViewController {
 
+    var presenter: KingsListPresenter!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem
+        
+        presenter = KingsListPresenter(dataRetriever: WebServiceManager(), view: self)
+        
+        presenter.loadAllKings()
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -92,4 +92,20 @@ class KingsTableViewController: UITableViewController {
     }
     */
 
+}
+
+extension KingsTableViewController: KingListPresenterOutput {
+    
+    func showError(message: String) {
+        print("Show error")
+    }
+    
+    func showNoContent() {
+        print("no content")
+    }
+    
+    func updateKingsList() {
+        print("Update")
+    }
+    
 }

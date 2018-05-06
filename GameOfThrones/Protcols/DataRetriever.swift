@@ -18,6 +18,6 @@ enum Result<A> {
 
 protocol DataRetriever {
     
-    func loadBattles(completionHandler: (Error?, [Battle]?) -> Void) -> Void
+    func loadBattles(completionHandler: @escaping (Error?, [Battle]?) -> Void) -> Void
     
 }

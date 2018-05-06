@@ -39,33 +39,41 @@ struct Battle: Codable {
  
     */
     
-    let name: String
-    let year: Int
-    let battleNumber: Int
-    let attackerKing: String
-    let defenderKing: String
-    let attacker1: String
-    let attacker2: String
-    let attacker3: String
-    let attacker4: String
-    let defender1: String
-    let defender2: String
-    let defender3: String
-    let defender4: String
-    let attackerOutcome: String
-    let battleType: String
-    let majorDeath: Int
-    let majorCapture: Int
-    let attackerSize: Int
-    let defenderSize: Int
-    let attackerCommander: String
-    let defenderCommander: String
-    let summer: Int
-    let location: String
-    let region: String
-    let note: String
+    var name: String?
+    var year: Int?
+    var battleNumber: Int?
+    var attackerKing: String?
+    var defenderKing: String?
+    var attacker1: String?
+    var attacker2: String?
+    var attacker3: String?
+    var attacker4: String?
+    var defender1: String?
+    var defender2: String?
+    var defender3: String?
+    var defender4: String?
+    var attackerOutcome: String?
+    var battleType: String?
+    var majorDeath: Int?
+    var majorCapture: Int?
+    var attackerSize: Int?
+    var defenderSize: Int?
+    var attackerCommander: String?
+    var defenderCommander: String?
+    var summer: Int?
+    var location: String?
+    var region: String?
+    var note: String?
     
-    private enum CodinKeys: String, CodingKey{
-        case name, year, battleNumber = "battle_number", attackerKing = "attacker_king", defenderKing = "defender_king", attacker1 = "attacker_1", attacker2 = "attacker_2", attacker3 = "attacker_3", attacker4 = "attacker_4", defender1 = "defender_1", defender2 = "defender_2", defender3 = "defender_3", defender4 = "defender_4", attackerOutcome = "attacker_outcome", battleType = "battle_type", majorDeath = "major_death", majorCapture = "major_capture", attackerSize = "attacker_size", defenderSize = "defender_size", attackerCommander = "attacker_commander", defenderCommander = "defender_commander", summer, location, region, note
+    
+    init(dictionary: [String : AnyObject]) {
+        name = dictionary["name"] as? String
+        attacker1 = dictionary["attacker_1"] as? String
+        attacker2 = dictionary["attacker_2"] as? String
+        attackerKing = dictionary["attacker_king"] as? String
+        attackerOutcome = dictionary["attacker_outcome"] as? String
+        attackerSize = Int((dictionary["attacker_size"] as? String)!) ?? 0
+        defenderSize = Int((dictionary["defender_size"] as? String)!) ?? 0
+        
     }
 }
