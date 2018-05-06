@@ -72,67 +72,52 @@ class KingsListPresenter {
 class BattleParser {
     
     
+    func update(attacker: King, withResultOf battle: Battle) {
+        
+        attacker.attacksMade += 1
+        switch battle.attackerOutcome {
+        case .win:
+            attacker.attacksWon += 1
+        case .loose:
+            break
+        }
+        attacker.battles.append(battle)
+    }
+    
+    func update(defender: King, withResultOf battle: Battle) {
+        
+        defender.defendsMade += 1
+        
+        switch battle.attackerOutcome {
+        case .win:
+            break
+        case .loose:
+            defender.defendsWon += 1
+        }
+        
+        defender.battles.append(battle)
+    }
+    
     func parse(battles: [Battle]) -> [King]{
         
         var kings = [String: King]()
         
         for battle in battles {
             
-            if let king = kings[battle.attackerKing] {
-                king.attacksMade += 1
-                switch battle.attackerOutcome {
-                case .win:
-                    king.attacksWon += 1
-                case .loose:
-                    break
-                }
-                king.battles.append(battle)
-                
-            } else {
-                
-                let attackerKing = King(name: battle.attackerKing)
-                attackerKing.attacksMade = 1
-                switch battle.attackerOutcome {
-                case .win:
-                    attackerKing.attacksWon = 1
-                case .loose:
-                    break
-                }
-                
+            let attackerKing = (kings[battle.attackerKing] == nil) ? King(name: battle.attackerKing) : kings[battle.attackerKing]!
+            update(attacker: attackerKing, withResultOf: battle)
+            
+            if kings[battle.attackerKing] == nil {
                 kings[battle.attackerKing] = attackerKing
-                attackerKing.battles.append(battle)
-
             }
             
-            if let king = kings[battle.defenderKing] {
-                king.defendsMade += 1
-                
-                switch battle.attackerOutcome {
-                case .win:
-                    break
-                case .loose:
-                    king.defendsWon += 1
-                }
-                
-                king.battles.append(battle)
-
-                
-            } else {
-                
-                let defenderKing = King(name: battle.defenderKing, battles: [battle])
-                defenderKing.defendsMade = 1
-                switch battle.attackerOutcome {
-                case .win:
-                    break
-                case .loose:
-                    defenderKing.defendsWon = 1
-                }
-                
+            let defenderKing = (kings[battle.defenderKing] == nil) ? King(name: battle.defenderKing) : kings[battle.defenderKing]!
+            update(defender: defenderKing, withResultOf: battle)
+            
+            if kings[battle.defenderKing] == nil {
                 kings[battle.defenderKing] = defenderKing
-                defenderKing.battles.append(battle)
             }
         }
-        
         return Array(kings.values)
     }
 }
