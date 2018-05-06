@@ -8,13 +8,18 @@
 
 import Foundation
 
+struct Constants {
+    
+    static let defaultELORating: Double = 400.0
+}
+
 struct KingListViewModel {
     
     let name: String
     let attacksMade: String
     let defendsMade: String
     let totalWin: String
-    let rating = "0"
+    let eloRating: String
     
     init(king: King) {
         
@@ -22,10 +27,9 @@ struct KingListViewModel {
         attacksMade = "\(king.attacksMade)"
         defendsMade = "\(king.defendsMade)"
         totalWin = "\(king.totalWin)"
+        eloRating = "\(king.eloRating)"
     }
-    
 }
-
 
 protocol KingListPresenterOutput {
     
@@ -123,19 +127,27 @@ class BattleParser {
         
         for battle in battles {
             
-            let attackerKing = (kings[battle.attackerKing] == nil) ? King(name: battle.attackerKing) : kings[battle.attackerKing]!
+            let attackerKing = (kings[battle.attackerKing] == nil) ? King(name: battle.attackerKing, rating: Constants.defaultELORating) : kings[battle.attackerKing]!
             update(attacker: attackerKing, withResultOf: battle)
             
             if kings[battle.attackerKing] == nil {
                 kings[battle.attackerKing] = attackerKing
             }
             
-            let defenderKing = (kings[battle.defenderKing] == nil) ? King(name: battle.defenderKing) : kings[battle.defenderKing]!
+            let defenderKing = (kings[battle.defenderKing] == nil) ? King(name: battle.defenderKing, rating: Constants.defaultELORating) : kings[battle.defenderKing]!
             update(defender: defenderKing, withResultOf: battle)
             
             if kings[battle.defenderKing] == nil {
                 kings[battle.defenderKing] = defenderKing
             }
+            
+            let attackerTotalLoss = attackerKing.totalBattlesFought - attackerKing.totalWin
+            let attackerELO = (defenderKing.eloRating + Constants.defaultELORating * Double(( attackerKing.totalWin -  attackerTotalLoss))) 
+            attackerKing.eloRating = attackerELO
+            
+            let defenderTotalLoss = defenderKing.totalBattlesFought - attackerKing.totalWin
+            let defenderELO = attackerKing.eloRating + Constants.defaultELORating * Double(( defenderKing.totalWin -  defenderTotalLoss ))
+            defenderKing.eloRating = defenderELO
         }
         return Array(kings.values)
     }

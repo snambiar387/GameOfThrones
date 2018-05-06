@@ -26,7 +26,7 @@ class KingTableViewCell: UITableViewCell {
     func configure(viewModel: KingListViewModel) {
         
         kingNameLabel.text = viewModel.name
-        ratingLabel.text = viewModel.rating
+        ratingLabel.text = viewModel.eloRating
         numberOfWinsLabel.text = viewModel.totalWin
         numberOfAttacksLabel.text = viewModel.attacksMade
         numberOfDefendsLabel.text = viewModel.defendsMade

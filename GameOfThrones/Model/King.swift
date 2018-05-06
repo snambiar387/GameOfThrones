@@ -20,8 +20,11 @@ class King {
         return attacksWon + defendsWon
     }
     
-    init(name: String) {
-        
+    var eloRating: Double
+    
+    init(name: String, rating: Double) {
+    
         self.name = name
+        self.eloRating = rating
     }
 }
