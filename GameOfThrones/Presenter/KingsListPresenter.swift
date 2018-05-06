@@ -8,6 +8,13 @@
 
 import Foundation
 
+struct KingListViewModel {
+    
+    let name: String
+    
+    
+}
+
 
 protocol KingListPresenterOutput {
     

@@ -11,20 +11,18 @@ import Foundation
 class King {
     let name: String
     var battles = [Battle]()
-    
-    init(name: String) {
-        
-        self.name = name
-    }
-    
     var attacksMade = 0
     var defendsMade = 0
     var attacksWon = 0
     var defendsWon = 0
     var totalBattlesFought = 0
+    var totalWins = 0
+    var totalWin: Int {
+        return attacksWon + defendsWon
+    }
     
-    init(name: String, battles: [Battle]) {
+    init(name: String) {
+        
         self.name = name
-        self.battles = battles
     }
 }
