@@ -8,7 +8,12 @@
 
 import Foundation
 
-struct Battle: Codable {
+enum BattleResult {
+    case win
+    case loose
+}
+
+struct Battle {
     
     /*
      "name": "Battle of the Golden Tooth",
@@ -39,41 +44,25 @@ struct Battle: Codable {
  
     */
     
-    var name: String?
-    var year: Int?
+    var name: String
+    //var year: Int
     var battleNumber: Int?
     var attackerKing: String?
     var defenderKing: String?
-    var attacker1: String?
-    var attacker2: String?
-    var attacker3: String?
-    var attacker4: String?
-    var defender1: String?
-    var defender2: String?
-    var defender3: String?
-    var defender4: String?
-    var attackerOutcome: String?
-    var battleType: String?
-    var majorDeath: Int?
-    var majorCapture: Int?
-    var attackerSize: Int?
-    var defenderSize: Int?
-    var attackerCommander: String?
-    var defenderCommander: String?
-    var summer: Int?
-    var location: String?
-    var region: String?
-    var note: String?
+    //var location: String?
+    var outcome: BattleResult
     
-    
-    init(dictionary: [String : AnyObject]) {
-        name = dictionary["name"] as? String
-        attacker1 = dictionary["attacker_1"] as? String
-        attacker2 = dictionary["attacker_2"] as? String
-        attackerKing = dictionary["attacker_king"] as? String
-        attackerOutcome = dictionary["attacker_outcome"] as? String
-        attackerSize = Int((dictionary["attacker_size"] as? String)!) ?? 0
-        defenderSize = Int((dictionary["defender_size"] as? String)!) ?? 0
+    init?(dictionary: [String : AnyObject]) {
+        
+        guard let name = dictionary["name"] as? String, let battleNumber = dictionary["battle_number"] as? Int, let attackerKing = dictionary["attacker_king"] as? String, let defenderKing = dictionary["defender_king"] as? String, let outcome = dictionary["attacker_outcome"] as? String  else {
+            return nil
+        }
+        
+        self.name = name
+        self.battleNumber = battleNumber
+        self.attackerKing = attackerKing
+        self.defenderKing = defenderKing
+        self.outcome = (outcome == "win") ? .win : .loose
         
     }
 }

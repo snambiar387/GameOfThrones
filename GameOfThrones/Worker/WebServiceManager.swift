@@ -33,7 +33,7 @@ class WebServiceManager: DataRetriever {
                 
                 guard let battleInfo = battleJson as? [[String: AnyObject]] else { return }
                 
-                let battles = battleInfo.map { Battle(dictionary: $0) }
+                let battles = battleInfo.map { Battle(dictionary: $0) }.flatMap{ $0 }
                 
                 completionHandler(nil , battles)
 
