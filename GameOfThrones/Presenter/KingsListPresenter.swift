@@ -11,7 +11,17 @@ import Foundation
 struct KingListViewModel {
     
     let name: String
+    let attacksMade: String
+    let defendsMade: String
+    let totalWin: String
     
+    init(king: King) {
+        
+        name = king.name
+        attacksMade = "\(king.attacksMade)"
+        defendsMade = "\(king.defendsMade)"
+        totalWin = "\(king.totalWin)"
+    }
     
 }
 
@@ -69,9 +79,10 @@ class KingsListPresenter {
        return kings?.count ?? 0
     }
     
-    func king(at index: Int) -> King{
+    func king(at index: Int) -> KingListViewModel{
         
-        return kings![index]
+        let king = kings![index]
+        return KingListViewModel(king: king)
     }
 }
 

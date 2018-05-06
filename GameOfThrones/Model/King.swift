@@ -16,7 +16,6 @@ class King {
     var attacksWon = 0
     var defendsWon = 0
     var totalBattlesFought = 0
-    var totalWins = 0
     var totalWin: Int {
         return attacksWon + defendsWon
     }
