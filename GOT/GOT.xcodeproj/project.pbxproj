@@ -13,6 +13,9 @@
 		461A3A1220A693C700578EBC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 461A3A1020A693C700578EBC /* LaunchScreen.storyboard */; };
 		461A3A1D20A693C800578EBC /* GOTTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 461A3A1C20A693C800578EBC /* GOTTests.swift */; };
 		461A3A2820A693C800578EBC /* GOTUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 461A3A2720A693C800578EBC /* GOTUITests.swift */; };
+		461A3A3D20A695C200578EBC /* KingsListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 461A3A3C20A695C200578EBC /* KingsListTableViewController.swift */; };
+		461A3A3F20A695E300578EBC /* KingsListInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 461A3A3E20A695E300578EBC /* KingsListInteractor.swift */; };
+		461A3A4120A695F400578EBC /* KingsListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 461A3A4020A695F400578EBC /* KingsListPresenter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +48,9 @@
 		461A3A2320A693C800578EBC /* GOTUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GOTUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		461A3A2720A693C800578EBC /* GOTUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GOTUITests.swift; sourceTree = "<group>"; };
 		461A3A2920A693C800578EBC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		461A3A3C20A695C200578EBC /* KingsListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KingsListTableViewController.swift; sourceTree = "<group>"; };
+		461A3A3E20A695E300578EBC /* KingsListInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KingsListInteractor.swift; sourceTree = "<group>"; };
+		461A3A4020A695F400578EBC /* KingsListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KingsListPresenter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,7 +101,8 @@
 		461A3A0620A693C700578EBC /* GOT */ = {
 			isa = PBXGroup;
 			children = (
-				461A3A3720A6946800578EBC /* Services */,
+				461A3A3A20A6958900578EBC /* Scenes */,
+				461A3A3720A6946800578EBC /* Worker */,
 				461A3A3520A6944300578EBC /* Model */,
 				461A3A3920A6951600578EBC /* UI */,
 				461A3A3820A6949A00578EBC /* Resourcs */,
@@ -128,11 +135,11 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
-		461A3A3720A6946800578EBC /* Services */ = {
+		461A3A3720A6946800578EBC /* Worker */ = {
 			isa = PBXGroup;
 			children = (
 			);
-			path = Services;
+			path = Worker;
 			sourceTree = "<group>";
 		};
 		461A3A3820A6949A00578EBC /* Resourcs */ = {
@@ -152,6 +159,24 @@
 				461A3A0B20A693C700578EBC /* Main.storyboard */,
 			);
 			name = UI;
+			sourceTree = "<group>";
+		};
+		461A3A3A20A6958900578EBC /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				461A3A3B20A6959900578EBC /* KingsList */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		461A3A3B20A6959900578EBC /* KingsList */ = {
+			isa = PBXGroup;
+			children = (
+				461A3A3C20A695C200578EBC /* KingsListTableViewController.swift */,
+				461A3A3E20A695E300578EBC /* KingsListInteractor.swift */,
+				461A3A4020A695F400578EBC /* KingsListPresenter.swift */,
+			);
+			path = KingsList;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -288,7 +313,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				461A3A3F20A695E300578EBC /* KingsListInteractor.swift in Sources */,
+				461A3A3D20A695C200578EBC /* KingsListTableViewController.swift in Sources */,
 				461A3A0820A693C700578EBC /* AppDelegate.swift in Sources */,
+				461A3A4120A695F400578EBC /* KingsListPresenter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
