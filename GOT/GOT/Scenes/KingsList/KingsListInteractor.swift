@@ -7,3 +7,15 @@
 //
 
 import Foundation
+
+protocol KingsListBusinessLogic {
+    
+    func fetchKings()
+}
+
+class KingsListInteractor: KingsListBusinessLogic {
+    
+    func fetchKings() {
+        
+    }
+}

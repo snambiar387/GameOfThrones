@@ -16,6 +16,8 @@
 		461A3A3D20A695C200578EBC /* KingsListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 461A3A3C20A695C200578EBC /* KingsListTableViewController.swift */; };
 		461A3A3F20A695E300578EBC /* KingsListInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 461A3A3E20A695E300578EBC /* KingsListInteractor.swift */; };
 		461A3A4120A695F400578EBC /* KingsListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 461A3A4020A695F400578EBC /* KingsListPresenter.swift */; };
+		461A3A4320A697BF00578EBC /* King.swift in Sources */ = {isa = PBXBuildFile; fileRef = 461A3A4220A697BF00578EBC /* King.swift */; };
+		461A3A4520A697D400578EBC /* Battle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 461A3A4420A697D400578EBC /* Battle.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +53,8 @@
 		461A3A3C20A695C200578EBC /* KingsListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KingsListTableViewController.swift; sourceTree = "<group>"; };
 		461A3A3E20A695E300578EBC /* KingsListInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KingsListInteractor.swift; sourceTree = "<group>"; };
 		461A3A4020A695F400578EBC /* KingsListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KingsListPresenter.swift; sourceTree = "<group>"; };
+		461A3A4220A697BF00578EBC /* King.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = King.swift; sourceTree = "<group>"; };
+		461A3A4420A697D400578EBC /* Battle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Battle.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -131,6 +135,8 @@
 		461A3A3520A6944300578EBC /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				461A3A4220A697BF00578EBC /* King.swift */,
+				461A3A4420A697D400578EBC /* Battle.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -317,6 +323,8 @@
 				461A3A3D20A695C200578EBC /* KingsListTableViewController.swift in Sources */,
 				461A3A0820A693C700578EBC /* AppDelegate.swift in Sources */,
 				461A3A4120A695F400578EBC /* KingsListPresenter.swift in Sources */,
+				461A3A4320A697BF00578EBC /* King.swift in Sources */,
+				461A3A4520A697D400578EBC /* Battle.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
