@@ -30,8 +30,19 @@ protocol KingsListPresenterOutput:class, ErrorHandler {
 
 struct KingViewModel {
     
+    let name: String
+    let attacksMade: String
+    let defendsMade: String
+    let totalWin: String
+    let eloRating: String
+    
     init(king: King) {
         
+        name = king.name
+        attacksMade = "\(king.attacksMade)"
+        defendsMade = "\(king.defendsMade)"
+        totalWin = "\(king.totalWin)"
+        eloRating = "\(king.eloRating)"
     }
 }
 
