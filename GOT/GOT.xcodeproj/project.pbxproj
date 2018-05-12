@@ -20,6 +20,7 @@
 		461A3A4520A697D400578EBC /* Battle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 461A3A4420A697D400578EBC /* Battle.swift */; };
 		461A3A4720A69C7900578EBC /* KingsListWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 461A3A4620A69C7900578EBC /* KingsListWorker.swift */; };
 		461A3A4920A6AE5E00578EBC /* BattleParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 461A3A4820A6AE5E00578EBC /* BattleParser.swift */; };
+		461A3A4B20A6B8DA00578EBC /* KingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 461A3A4A20A6B8DA00578EBC /* KingTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +60,7 @@
 		461A3A4420A697D400578EBC /* Battle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Battle.swift; sourceTree = "<group>"; };
 		461A3A4620A69C7900578EBC /* KingsListWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KingsListWorker.swift; sourceTree = "<group>"; };
 		461A3A4820A6AE5E00578EBC /* BattleParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BattleParser.swift; sourceTree = "<group>"; };
+		461A3A4A20A6B8DA00578EBC /* KingTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KingTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -187,6 +189,7 @@
 				461A3A3C20A695C200578EBC /* KingsListTableViewController.swift */,
 				461A3A3E20A695E300578EBC /* KingsListInteractor.swift */,
 				461A3A4020A695F400578EBC /* KingsListPresenter.swift */,
+				461A3A4A20A6B8DA00578EBC /* KingTableViewCell.swift */,
 			);
 			path = KingsList;
 			sourceTree = "<group>";
@@ -333,6 +336,7 @@
 				461A3A4320A697BF00578EBC /* King.swift in Sources */,
 				461A3A4920A6AE5E00578EBC /* BattleParser.swift in Sources */,
 				461A3A4520A697D400578EBC /* Battle.swift in Sources */,
+				461A3A4B20A6B8DA00578EBC /* KingTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

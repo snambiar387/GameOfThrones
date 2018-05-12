@@ -58,15 +58,20 @@ class KingsListPresenter: KingsListPresenterInput {
     
     func handleError(message: String) {
         
-        view?.handleError(message: message)
+        DispatchQueue.main.async {
+           self.view?.handleError(message: message)
+        }
     }
     
     func showNoContent() {
-        view?.showNoContent()
+        DispatchQueue.main.async {
+            self.view?.showNoContent()
+        }
     }
     
     func fetchedKings(kings: [King]) {
-        
-        view?.update(kings: kings.map { KingViewModel(king: $0) })
+        DispatchQueue.main.async {
+            self.view?.update(kings: kings.map { KingViewModel(king: $0) })
+        }
     }
 }
