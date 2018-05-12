@@ -18,6 +18,8 @@
 		461A3A4120A695F400578EBC /* KingsListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 461A3A4020A695F400578EBC /* KingsListPresenter.swift */; };
 		461A3A4320A697BF00578EBC /* King.swift in Sources */ = {isa = PBXBuildFile; fileRef = 461A3A4220A697BF00578EBC /* King.swift */; };
 		461A3A4520A697D400578EBC /* Battle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 461A3A4420A697D400578EBC /* Battle.swift */; };
+		461A3A4720A69C7900578EBC /* KingsListWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 461A3A4620A69C7900578EBC /* KingsListWorker.swift */; };
+		461A3A4920A6AE5E00578EBC /* BattleParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 461A3A4820A6AE5E00578EBC /* BattleParser.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +57,8 @@
 		461A3A4020A695F400578EBC /* KingsListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KingsListPresenter.swift; sourceTree = "<group>"; };
 		461A3A4220A697BF00578EBC /* King.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = King.swift; sourceTree = "<group>"; };
 		461A3A4420A697D400578EBC /* Battle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Battle.swift; sourceTree = "<group>"; };
+		461A3A4620A69C7900578EBC /* KingsListWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KingsListWorker.swift; sourceTree = "<group>"; };
+		461A3A4820A6AE5E00578EBC /* BattleParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BattleParser.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -144,6 +148,8 @@
 		461A3A3720A6946800578EBC /* Worker */ = {
 			isa = PBXGroup;
 			children = (
+				461A3A4620A69C7900578EBC /* KingsListWorker.swift */,
+				461A3A4820A6AE5E00578EBC /* BattleParser.swift */,
 			);
 			path = Worker;
 			sourceTree = "<group>";
@@ -321,9 +327,11 @@
 			files = (
 				461A3A3F20A695E300578EBC /* KingsListInteractor.swift in Sources */,
 				461A3A3D20A695C200578EBC /* KingsListTableViewController.swift in Sources */,
+				461A3A4720A69C7900578EBC /* KingsListWorker.swift in Sources */,
 				461A3A0820A693C700578EBC /* AppDelegate.swift in Sources */,
 				461A3A4120A695F400578EBC /* KingsListPresenter.swift in Sources */,
 				461A3A4320A697BF00578EBC /* King.swift in Sources */,
+				461A3A4920A6AE5E00578EBC /* BattleParser.swift in Sources */,
 				461A3A4520A697D400578EBC /* Battle.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
